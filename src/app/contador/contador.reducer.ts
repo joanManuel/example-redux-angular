@@ -4,6 +4,7 @@ import {
   decrementar,
   multiplicar,
   dividir,
+  reset,
 } from './contador.actions';
 
 // export function contadorReducer(state: number = 10, action: Action) {
@@ -25,8 +26,8 @@ const _contadorReducer = createReducer(
   on(incrementar, (state) => state + 1),
   on(decrementar, (state) => state - 1),
   on(multiplicar, (state, { number }) => state * number),
-  on(dividir, (state, { number }) => state / number)
-  // on(reset, (state) => 0)
+  on(dividir, (state, { number }) => state / number),
+  on(reset, (state) => 0)
 );
 
 export function contadorReducer(state, action) {
